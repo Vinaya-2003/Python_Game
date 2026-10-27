@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python Lab — Learn, Code, Build</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material-darker.min.css">
+<link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header>
+  <div><h1>🐍 Python Lab</h1><small>Learn, Code, Build</small></div>
+  <div class="stats"><b id="lvl"></b> <span id="xp"></span><div class="track"><div id="bar"></div></div><small id="prog"></small></div>
+</header>
+<nav id="tabs">
+  <button data-t="learn">1 · Learn</button><button data-t="explore">2 · Explore</button>
+  <button data-t="practice">3 · Practice</button><button data-t="build">4 · Build</button><button data-t="code">5 · Free Code</button>
+</nav>
+<div id="load" class="banner">⏳ Loading Python (first load takes a few seconds)…</div>
+<main class="layout">
+  <section id="content"></section>
+  <aside id="workspace">
+    <div class="bar"><b id="now">Free play</b>
+      <span><button id="run">▶ Run</button> <button id="tbtn" hidden>✔ Run tests</button> <button id="reset" class="ghost">Reset</button> <button id="clear" class="ghost">Clear</button></span></div>
+    <textarea id="code"></textarea>
+    <label class="lbl">Input for <code>input()</code> — one value per line</label>
+    <textarea id="inp" rows="2" placeholder="e.g. 5"></textarea>
+    <pre id="out" aria-live="polite"></pre>
+    <ul id="tests"></ul>
+  </aside>
+</main>
+<footer>Progress is saved in this browser only (localStorage) and does not sync across devices. <button id="wipe" class="ghost">Reset progress</button></footer>
+<div id="toast" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+<script src="data/lessons.js"></script>
+<script src="js/python-runner.js"></script>
+<script src="js/app.js"></script>
+</body></html>
